@@ -3,14 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'panamax',
     pathMatch: 'full'
   },
+  {
+    path: 'panamax',
+    loadChildren: () => import('./panamax/panamax.module').then( m => m.PanamaxPageModule)
+  }
 ];
 
 @NgModule({
